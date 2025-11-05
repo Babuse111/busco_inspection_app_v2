@@ -1,0 +1,70 @@
+{
+  "expo": {
+    "name": "Buscor Inspection",
+    "slug": "buscor-inspection-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ff6b35"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.buscor.inspection"
+    },
+    "android": {
+      "package": "com.buscor.inspection",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ff6b35"
+      },
+      "permissions": [
+        "CAMERA",
+        "WRITE_EXTERNAL_STORAGE",
+        "READ_EXTERNAL_STORAGE",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "RECORD_AUDIO"
+      ],
+      "usesCleartextTraffic": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-sqlite",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Buscor app needs camera access to capture inspection photos and document bus conditions for safety compliance."
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Buscor app needs photo library access to save inspection photos for record keeping and safety documentation.",
+          "savePhotosPermission": "Buscor app saves inspection photos to your device for backup and offline access."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Buscor app needs location access to record inspection locations for compliance and route tracking.",
+          "isIosBackgroundLocationEnabled": false
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "buscor-inspection-2024"
+      }
+    }
+  }
+}
