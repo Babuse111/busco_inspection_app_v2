@@ -4,7 +4,7 @@
 
 ### 1. Install EAS CLI
 ```bash
-npm install -g @expo/eas-cli
+npm install -g eas-cli
 ```
 
 ### 2. Login to Expo
