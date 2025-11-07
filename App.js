@@ -5,6 +5,7 @@ import { Camera } from 'expo-camera';
 import * as MediaLibrary from 'expo-media-library';
 import { supabase, signUp, signIn, signOut, getDepots, getBuses } from './services/supabase';
 import PhotoCapture from './components/PhotoCapture';
+import BuscorLogo from './components/BuscorLogo';
 
 export default function App() {
   const [currentScreen, setCurrentScreen] = useState('welcome');
@@ -220,13 +221,9 @@ export default function App() {
       
       {/* Main content */}
       <View style={styles.landingContent}>
-        {/* Buscor Logo (use provided PNG) */}
+        {/* Buscor Logo */}
         <View style={styles.landingLogoContainer}>
-          <Image
-            source={require('./assets/buscor-logo.png')}
-            style={styles.landingLogoImage}
-            resizeMode="contain"
-          />
+          <BuscorLogo />
         </View>
 
         {/* App title */}
